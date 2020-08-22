@@ -13,10 +13,17 @@ namespace NumeroaLetra.Controllers
     public class LiteralController : ControllerBase
     {
         [HttpGet]
+        [Route ("Lit")]
         public string LiteralGet(int numero)
         {
             return Conversores.NumeroALetras(numero);
         }
+
+        public string Lit(int a)
+        {
+            throw new NotImplementedException();
+        }
+
         [HttpPost]
         public string LiteralPost([FromHeader] int numero)
         {
