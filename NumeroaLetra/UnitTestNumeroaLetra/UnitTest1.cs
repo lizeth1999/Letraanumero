@@ -11,18 +11,17 @@ namespace UnitTestNumeroaLetra
         public void Literal()
         {
             //Arrange
-            LiteralController literalController = LiteralController();
+            LiteralController literalController = new LiteralController();
             int a= 4;
-            string esperado = "CUATRO";
+            string esperado = "CUATRO  00 /100";
+
             //Act
-            string resultado = literalController.Lit(a);
+            string resultado = literalController.LiteralGet(a);
+
             //Assert
             Assert.AreEqual(esperado, resultado);
         }
 
-        private LiteralController LiteralController()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
